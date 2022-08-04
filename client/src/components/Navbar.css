@@ -1,0 +1,17 @@
+.navbar{
+    max-width: 800px auto;
+    border-radius: 10px;
+}
+
+.middleNav{
+    margin-right: 40px;
+    right:40px
+}
+.hoverNav{
+    padding-left: 10px;
+}
+
+.hoverNav:hover{
+    transition: 0.2s ease;
+    color: rgb(28, 105, 172);
+}

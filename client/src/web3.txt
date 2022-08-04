@@ -1,0 +1,24 @@
+web3
+cd truffle &&  truffle compile
+truffle migrate --reset
+
+let instance = await Dapp.deployed()
+let accounts = await web3.eth.getAccounts()
+
+instance.login(2,{from: accounts[3]})
+instance.login(3,{from: accounts[4]})
+
+
+instance.EnterBlogDetails("Hi","I am Nandan",accounts[1],{from: accounts[1]});
+instance.EnterBlogDetails("Hi","I am Bob",accounts[2],{from: accounts[2]});
+instance.getAllBlogs()
+
+ instance.addsection("DBMS Class",{from: accounts[0]});
+ instance.addsection("Java Class",{from: accounts[0]});
+instance.getAllSections()
+
+
+web3.eth.getBalance(instance.address)
+instance.getPlayers()
+instance.pickWinner()
+instance.getWinnerByHistory(0)
